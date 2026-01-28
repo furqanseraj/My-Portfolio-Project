@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Md Furqan Seraj | Software Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0b0b0b;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Navbar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 80px;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 22px;
+            color: #ffb400;
+        }
+
+        nav a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffb400;
+        }
+
+        /* Hero */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px;
+        }
+
+        .hero-text h5 {
+            color: #ffb400;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+        }
+
+        .hero-text span {
+            color: #ffb400;
+        }
+
+        .hero-text p {
+            margin-top: 10px;
+            color: #ccc;
+        }
+
+        .hero-img img {
+            width: 320px;
+            border-radius: 20px;
+        }
+
+        /* Buttons */
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .btn-primary {
+            background: #ffb400;
+            border: none;
+            padding: 12px 25px;
+            cursor: pointer;
+            border-radius: 25px;
+            margin-right: 10px;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid #ffb400;
+            color: #ffb400;
+            padding: 12px 25px;
+            cursor: pointer;
+            border-radius: 25px;
+        }
+
+        .about-section {
+            padding: 80px 10%;
+            background: #0b0b0b;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        /* Cards */
+        .about-card,
+        .skills-card {
+            background: #111;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 200, 0, 0.15);
+        }
+
+        .about-card h2,
+        .skills-card h2 {
+            color: #ffc800;
+            margin-bottom: 20px;
+        }
+
+        .about-card p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .about-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+
+        .about-card li {
+            margin-bottom: 8px;
+        }
+
+        /* Resume Button */
+        .resume-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #ffc800, #ff9900);
+            color: #000;
+            font-weight: bold;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .resume-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px rgba(255, 200, 0, 0.6);
+        }
+
+        /* Skills */
+        .skill {
+            margin-bottom: 20px;
+        }
+
+        .skill span {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .bar {
+            width: 100%;
+            height: 10px;
+            background: #333;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .bar div {
+            height: 100%;
+            background: linear-gradient(90deg, #ffc800, #ff9900);
+            border-radius: 10px;
+        }
+
+        .progress {
+            background: #333;
+            height: 8px;
+            border-radius: 10px;
+        }
+
+        .bar {
+            height: 8px;
+            background: #ffb400;
+        }
+
+        /* Projects */
+        .projects-section {
+            padding: 90px 10%;
+            background: #0b0b0b;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 36px;
+            color: #ffc800;
+            margin-bottom: 50px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+        }
+
+        .project-card {
+            background: #111;
+            padding: 30px;
+            border-radius: 18px;
+            text-align: left;
+            transition: 0.3s ease;
+            box-shadow: 0 0 10px rgba(255, 200, 0, 0.08);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 0 25px rgba(255, 200, 0, 0.35);
+        }
+
+        .project-card h3 {
+            color: #ffc800;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-weight: bold;
+        }
+
+        .project-card span {
+            display: block;
+            font-size: 14px;
+            opacity: 0.8;
+            margin: 12px 0 18px;
+        }
+
+        .project-links a {
+            display: inline-block;
+            margin-right: 12px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid #ffc800;
+            color: #ffc800;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .project-links a:hover {
+            background: #ffc800;
+            color: #000;
+        }
+
+
+        /* Contact */
+        .contact-section {
+            padding: 90px 10%;
+            background: #000;
+            text-align: center;
+        }
+
+        .contact-card {
+            max-width: 500px;
+            margin: auto;
+            background: #111;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 200, 0, 0.15);
+        }
+
+        .contact-card p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .social-links a {
+            margin: 0 12px;
+            padding: 10px 24px;
+            border-radius: 30px;
+            background: linear-gradient(45deg, #ffc800, #ff9900);
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px rgba(255, 200, 0, 0.6);
+        }
+    </style>
+    <!-- Navbar -->
+    <header>
+        <div class="logo">MD FURQAN SERAJ</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h5>HELLO!</h5>
+            <h1>I'm <span>Md Furqan Seraj</span></h1>
+            <h3>Java Full Stack Developer</h3>
+            <p>CSE Graduate (2021–2025) | Passionate about Backend & Web Development</p>
+
+            <div class="buttons">
+                <a href="#contact"><button class="btn-primary">Hire Me</button></a>
+                <a href="#projects"><button class="btn-secondary">My Projects</button></a>
+            </div>
+        </div>
+
+        <div class="hero-img">
+            <img src="md.png" alt="Furqan Profile">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-container">
+
+            <!-- About Card -->
+            <div class="about-card">
+                <h2>About Me</h2>
+                <p>
+                    I'm a Computer Science Engineering graduate (2021–2025) with strong knowledge of Java Full Stack
+                    Development.
+                    I enjoy building scalable backend applications and modern web interfaces.
+                </p>
+
+                <ul>
+                    <li><b>Name:</b> Md Furqan Seraj</li>
+                    <li><b>Degree:</b> B.Tech in Computer Science</li>
+                    <li><b>Status:</b> Actively looking for opportunities</li>
+                </ul>
+
+                <a href="Myresume.pdf" download class="resume-btn">⬇ Download Resume</a>
+            </div>
+
+            <!-- Skills Card -->
+            <div class="skills-card">
+                <h2>My Skills</h2>
+
+                <div class="skill">
+                    <span>Java With DSA</span>
+                    <div class="bar">
+                        <div style="width:90%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <span>HTML / CSS / JS</span>
+                    <div class="bar">
+                        <div style="width:85%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <span>AI / DBMS / SQL </span>
+                    <div class="bar">
+                        <div style="width:80%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <span>Spring Boot / ThymLeaf / Hibernate </span>
+                    <div class="bar">
+                        <div style="width:88%"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Projects -->
+    <section class="projects-section">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <h3>🎓 Job App</h3>
+                <p> Java • Spring Boot • Thymleaf • MySQL</p>
+                <span>CRUD APIs, Authentication, Dashboard</span>
+                <div class="project-links">
+                    <a href="#">Live</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>💼 Portfolio Website</h3>
+                <p>HTML • CSS • JavaScript</p>
+                <span>Responsive UI, Animations, SEO</span>
+                <div class="project-links">
+                    <a href="#">Live</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section class="contact-section">
+        <h2 class="section-title">Contact Me</h2>
+
+        <div class="contact-card">
+            <p>📧 furqanseraj555@gmail.com</p>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/furqan-seraj-a2bb9b260/" target="_blank">LinkedIn</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
